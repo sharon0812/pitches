@@ -26,6 +26,7 @@ def all():
     '''
     title = 'Home - Welcome to this side'
     pitches= Pitch.get_all_pitches()
+
     # upvotes = Upvote.get_all_upvotes(pitch_id=Pitch.id)
     return render_template('main.html', title = title, pitches= pitches)
 
@@ -156,6 +157,7 @@ def update_pic(uname):
         db.session.commit()
     return redirect(url_for('main.profile',uname=uname))
 
+
 @main.route('/view/comment/<int:id>')
 def view_comments(id):
     '''
@@ -163,6 +165,7 @@ def view_comments(id):
     '''
     comments = Comment.get_comments(id)
     return render_template('view_comments.html',comments = comments, id=id)
+
 
 @main.route('/test/<int:id>')
 def test(id):
@@ -183,6 +186,7 @@ def upvote(pitch_id):
     new_upvote = Upvote(pitch_id=pitch_id, user = current_user)
     new_upvote.save_votes()
     return redirect(url_for('main.all'))
+    
 
 @main.route('/pitch/downvote/<int:pitch_id>/downvote', methods = ['GET', 'POST'])
 @login_required
