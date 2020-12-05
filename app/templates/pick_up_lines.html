@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/pickup.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock %}
+{% block content %}
+<section class=" pick">
+        <div class="container ">
+                <h3 style="font-size: 30px; font-weight: 900; color: black; font-family: 'Anton', sans-serif;
+                font-family: 'Lobster', cursive;
+                font-family: 'Ultra', serif;" class="text-center ">Pick Up Lines</h3>
+                <a style="font-size:20px;" class="btn-success"  href="{{url_for('main.new_pitch')}}">
+                    <br>
+                    Add a new Pitch
+                </a>
+                <hr class="bg-light">
+                    {{macro.displayPitchesInCategories(pitches,2)}}
+                <hr>
+            </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/interview.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+<section class="">
+        <div class="container">
+                <h3 class="text-center" style="font-size: 30px; font-weight: bolder; font-family: 'Anton', sans-serif;
+                font-family: 'Lobster', cursive;
+                font-family: 'Ultra', serif; color: black;">Inteview Pitches</h3>
+                <a style="font-size: 20px; font-family: 'Courier New', Courier, monospace;" class="btn btn-success" href="{{url_for('main.new_pitch')}}">
+                    <br>
+                    Add a new Pitch
+                </a>
+                <hr>
+                    {{macro.displayPitchesInCategories(pitches,1)}}
+                <hr>
+            </div>
+</section>
+{% endblock %}

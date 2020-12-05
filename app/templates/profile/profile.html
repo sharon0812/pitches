@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container-fluid">
+
+  <div class="row">
+
+
+    <div class="col-md-4" style="padding-top: 100px; padding-left: 70px;">
+      <h3 style="font-size: 30px; font-style: oblique; font-family: 'Anton', sans-serif;
+      font-family: 'Lobster', cursive;"> Name:{{user.username| capitalize}} </h3>
+
+      {% if user.bio %}
+      <p style="font-size: 30px; font-style: oblique; font-family: 'Anton', sans-serif;
+      font-family: 'Lobster', cursive;"> Bio:{{user.bio}}</p>
+
+      {%else%}
+      <p style="font-size: 30px;"> {{user.username| capitalize}} has no bio </p>
+      {% endif %}
+
+      {% if user == current_user %}
+      <a style="font-size: 30px;" class="btn btn-success"
+        href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+      {% endif %}
+
+    </div>
+    <div class="col-md-8" style="padding-left: 100px; padding-top: 50px;">
+      {% if user.profile_pic_path %}
+
+      <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail" width="300px"
+        height="150px" style="border-radius: 100px;">
+
+      {%else%}
+      <p style="font-size: 30px;">No profile picture</p>
+
+      {% endif %}
+      <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype="multipart/form-data">
+        <br> <br>
+        <input style="font-size: 30px;" class="btn btn-success" type="file" name="photo" required width="80px"> <br>
+        <input type="submit" style="font-size: 30px;">
+
+      </form>
+    </div>
+
+
+  </div>
+</div>
+{% endblock %}

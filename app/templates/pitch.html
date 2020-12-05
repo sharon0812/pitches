@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+    <div class="row">
+            <h3>Pitch ID:{{ found_pitch.id }}</h3>
+            <p> {{ found_pitch.pitch }}</p>
+            <a style="font-size: 25px;" href="/pitch/comments/new/{{found_pitch.id}}"> Comment</a>
+    </div>
+    <div class="row">
+                    <h1 style="font-size: 20px;">Comments on this Pitch</h1>
+                    <hr>
+                    {% if pitch_comments %}
+                        {{ macro.displayComments(pitch_comments) }}
+                    {% else%}
+                        <h3 class="text-center">This Pitch has no Comments </h3>
+                    {% endif %}
+                </div>
+</div>
+{% endblock %}

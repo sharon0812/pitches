@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=Akronim%7CBellefair%7CJoti+One" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <a href="{{url_for('main.index')}}">
+            <button type="button" class="btn btn-primary btn-sm">
+                    <span class="glyphicon glyphicon-chevron-left" ></span> Back
+                </button>
+                <h3 style="color:black; font-size: 30px;">Comments:</h3>
+        </a>
+        <h6> &nbsp; &nbsp; <span style="font-weight:bolder">Found :</span>  &nbsp; <span style="font-family:Bellefair; font-size:30px;">{{ comments | count }} Comments</span></h6>
+        <hr>
+        {% for item in comments[::-1] %}
+            <div class="panel">
+                <p style="font-family:Bellefair; font-size:20px; padding:10px; text-align:center;">{{item.comment}}</p>
+                <h5>&nbsp;&nbsp;Comment by: &nbsp;<span style="color:black;font-family:Bellefair; font-size:20px;">{{item.username}}</span></h5>
+            </div>
+            {%endfor%}
+    </div>
+{% endblock %}
