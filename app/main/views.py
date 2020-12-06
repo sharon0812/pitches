@@ -1,6 +1,5 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
-# from ..models import User,PhotoProfile
 from flask_login import login_required
 from .forms import CommentsForm ,UpdateProfile, PitchForm, UpvoteForm, DownvoteForm
 from ..models import User,PhotoProfile, Pitch, Comment,PitchCategory,Downvote,Upvote
