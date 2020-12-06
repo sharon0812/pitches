@@ -1,6 +1,6 @@
 {% macro displayPitches(pitches_list) %}
     {% for pitch in pitches_list[::-1] %}
-    
+
       <div class="panel"style="padding:10px; text-align:center;">
           <h3 style="font-size: 20px;">{{pitch.pitch}}</h3>
           <p style="font-size: 20px;"> Posted on:{{ pitch.date.strftime('%y-%m-%d') }}</p>
@@ -13,7 +13,7 @@
       </div>
     {% endfor %}
 {% endmacro %}
-<!-- Displaying comments macro -->
+
 {% macro displayComments(list_of_comments) %}
 {% for comment in list_of_comments[::-1]  %}
 
@@ -31,7 +31,7 @@
 {% endmacro %}
 {% macro displayPitchesInCategories(pitches,id)%}
   {% for pitch in pitches[::-1] %}
-  <!-- add comments on alist -->
+  
     {% if pitch.category_id==id%}
 
         <div class="panel bg-light text-center style="style="box-shadow: 5px 5px 5px 5px #F2F2F2; padding:10px;">
