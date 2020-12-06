@@ -1,4 +1,4 @@
 
 Hello {{user.username}}
-Welcome to Watchlist
+Welcome to one-minute-pitch
 We have just seen you have signed up for our application and want to welcome you here. Please enjoy the reviews of all your  favourites.
