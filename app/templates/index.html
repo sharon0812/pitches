@@ -18,8 +18,8 @@
     <div class="container-fluid" style="text-align:center; padding-top:250px;">
         <h2 style="color: black;font-family: 'Anton', sans-serif;
         font-family: 'Lobster', cursive; font-size: 30px;">In life, you only have 60 seconds to impress someone. <br> minute can make or break you. How do we make sure that you use your 1 minute to actually say something meaningful?</h2>
-    <p style="font-size: 20px; color: blue;">You can produce a pitch of your own choice , comment on any pitch, <br>and upvote or downvote.</p>
-        <h5 style="font-size: 25px; color:blue;"> Sign in first to access the opportunity.</h5> <br> <br>
+    <p style="font-size: 20px; color: blue;">You can produce a pitch of your own choice , comment on any pitch you like, <br>and upvote or downvote.</p>
+        <h5 style="font-size: 25px; color:blue;"> Kindly Sign in to access the opportunity.</h5> <br> <br>
 
         {% if current_user.is_anonymous%}
         <li  class="btn btn-info" style="font-size: 20px;"><a href="{{url_for('auth.login')}}" class="text-light"><strong>Sign In</strong></a></li>
