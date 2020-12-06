@@ -44,11 +44,9 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {% if current_user.is_authenticated %}
-        <!-- <li style="color:white;padding:15px;">{{current_user.username}}</li> -->
         <li style="font-size: 20px;" class="dropdown"><a href="#" class="dropdown-toggle text-light" data-toggle="dropdown"><i class="fa fa-user"></i><strong class="ml-2">Welcome, {{current_user.username}}</strong></a>
           <ul class="dropdown-menu bg-info text-center">
               <li style="font-size: 20px;"><a href="{{url_for('main.profile',uname=current_user.username)}} " class="text-light " ><i class="icon-envelope"></i><strong>Your profile</strong></a></li>
-              <!-- <li class="divider"></li> -->
               <div class="dropdown-divider"></div>
               <li style="font-size: 20px;"><a href="{{url_for('auth.logout')}}" class="text-light "><i class="fa fa-sign-out mr-2"></i><strong>Logout</strong></a></li>
           </ul>
