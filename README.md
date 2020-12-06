@@ -4,7 +4,8 @@
   * In life, you only have 60 seconds to  impress someone. One minute can make or    break you. This application  allowa users to use that one minute wisely.
 
 ## AUTHOR
- * Sharon Anyango
+ *  Sharon Anyango
+ ## 
 
  ## FEATURES
  *   Sign in and see profile after sighning
@@ -19,14 +20,12 @@
  *  Flask
  *  Html
  *  Bootstap
- *  Pip
- *  Virtual environment
 
  ## CLONNING
- * Git clone this repo on your terminal cd pitches and then open it in your terminal.
+ * Git clone the repo on your terminal cd pitches and then open it in your visual studio.
     
   ## CONTACTS
   * anyangosharon26@gmail.com 
 
   ## LICENSE
-  *Mit License2020 © AokoMercyline
+  *Mit License2020 © Sharon Anynango
