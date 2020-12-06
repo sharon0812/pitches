@@ -5,7 +5,9 @@
 
 ## AUTHOR
  *  Sharon Anyango
- ## 
+
+ ## GITHUB REPO LINK
+ *  https://github.com/sharon0812/pitches
 
  ## FEATURES
  *   Sign in and see profile after sighning
